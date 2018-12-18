@@ -39,6 +39,26 @@
 			</h:panelGrid>
 		</p:dialog>
 
+		<br />
+
+		<p:dataTable var="person" value="#{spinnerController.persons}">
+			<p:column headerText="Id">
+				<h:outputText value="#{person.id}" />
+			</p:column>
+
+			<p:column headerText="FirstName">
+				<h:outputText value="#{person.firstName}" />
+			</p:column>
+
+			<p:column headerText="LastName">
+				<h:outputText value="#{person.lastName}" />
+			</p:column>
+
+			<p:column headerText="Email">
+				<h:outputText value="#{person.email}" />
+			</p:column>
+		</p:dataTable>
+
 	</h:form>
 
 </h:body>
