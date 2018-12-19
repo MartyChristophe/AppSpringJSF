@@ -26,5 +26,11 @@ public class PersonServiceImp implements PersonService {
    public List<Person> listPersons() {
       return userDao.listPersons();
    }
+   
+   @Transactional
+   @Override
+   public Person loadPerson(Long id) {
+	   return userDao.loadPerson(id);
+   }
 
 }

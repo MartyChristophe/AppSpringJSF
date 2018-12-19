@@ -17,14 +17,10 @@
 </style>
 
 	<h:form>
-		<h:outputLabel for="ajaxSpinner" value="Ajax Spinner: " />
-		<p:outputPanel>
-			<p:spinner id="ajaxSpinner" value="#{spinnerController.number1}">
-				<p:ajax update="ajaxSpinnerValue" process="@this" />
-			</p:spinner>
-			<h:outputText id="ajaxSpinnerValue"
-				value="#{spinnerController.number1}" style="padding-left: 10px" />
-		</p:outputPanel>
+		<h:outputLabel for="person" value="Id personne : " />
+		<p:inputText id="ajaxSpinner" value="#{spinnerController.id}">
+			<p:ajax update="ajaxSpinnerValue" process="@this" />
+		</p:inputText>
 
 		<br />
 
@@ -35,7 +31,7 @@
 			hideEffect="fold">
 			<h:panelGrid id="display" columns="2" cellpadding="5">
 				<h:outputText value="Value : " />
-				<h:outputText value="#{spinnerController.number1}" />
+				<h:outputText value="#{spinnerController.loadPerson(spinnerController.id)}" />
 			</h:panelGrid>
 		</p:dialog>
 
